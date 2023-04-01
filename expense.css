@@ -1,0 +1,36 @@
+.expense-item{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px  8px rgba(red, green, blue, alpha);
+    margin: 1px;
+    border-radius: 12px;
+    background-color: bisque;
+}
+.movies{
+    display:flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+    margin: 1px;
+    border-radius: 12px;
+    background-color:brown;
+}
+.petrol{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 1px;
+    border-radius: 12px;
+    background-color:burlywood;
+}
+.food{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    margin: 1px;
+    border-radius: 12px;
+    background-color:burlywood;
+}
