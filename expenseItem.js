@@ -1,5 +1,5 @@
 import './expense.css'
-function ExpenseItem(props){
+const ExpenseItem=((props)=>{
     const exp = 'Food Rs 10';
     const petrol = "Petrol Rs 100";
     const movie = 'Movies Rs 200';
@@ -30,5 +30,5 @@ function ExpenseItem(props){
         </div>
       </div>
     );
-}
+});
 export default ExpenseItem;
