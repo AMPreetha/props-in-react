@@ -1,29 +1,41 @@
+import React,{ useState } from 'react';
 import './expense.css'
-const ExpenseItem=(()=>{
+const ExpenseItem=((props)=>{
+  const [money,setTitle]=useState(money)
   const clickHandler=()=>{
-    console.log('clicked')
+    setTitle('100')
+    console.log('setTitle')
   }
-    const exp = 'Food Rs 10';
-    const petrol = "Petrol Rs 100";
-    const movie = 'Movies Rs 200';
-    const loc='locationOfExpense';
+    const exp = 'Food ';
+    const petrol = "Petrol ";
+    const movie = 'Movies ';
+    const money='100';
+    const mon='200';
+    const mone='300'
     
 
     return (
       <div>
+        <div className="expense-item">Expense Item</div>
+
         <div>
-          <h1 className="expense-item">Expense Item</h1>
+          <p className="food">
+            {exp}
+            <p1>{props.money}</p1>
+            <button onClick={clickHandler}>Delete Expense</button>
+          </p>
         </div>
-        
         <div>
-          <p className="food">{exp}</p>
-        </div>
-        <div>
-          <p className="petrol">{petrol}</p>
+          <p className="petrol">
+            {petrol}
+            <p1>{mon}</p1>
+            <button onClick={clickHandler}>Delete Expense</button>
+          </p>
         </div>
         <div>
           <p className="movies">{movie}</p>
-          <p>{loc}</p>
+          <p1>{mone}</p1>
+          <button onClick={clickHandler}>Delete Expense</button>
         </div>
         <button onClick={clickHandler}>Delete Expense</button>
       </div>
