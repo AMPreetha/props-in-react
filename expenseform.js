@@ -20,21 +20,24 @@ const ExpenseForm=()=>{
         ExpenseAmount:enteredExpenseAmount,
         Date:new Date(enteredDate)
     }
-    console.log(exp);
+    props.onSaveExpenseData();
+    setEnteredExpenseTitle('');
+    setEnteredExpenseAmount('');
+    setEnteredDate('');
     }
     return (
         <form onSubmit={submitChangeHandler}>
             <div>
                 <lable>ExpenseTitle</lable>
-                <input type='text' onChange={titleChangeHandler}/>
+                <input type='text' value={enteredExpenseTitle} onChange={titleChangeHandler}/>
             </div>
             <div>
                 <label>ExpenseAmount</label>
-                <input type='number' onChange={amountChangeHandler}/>
+                <input type='number' value={enteredExpenseAmount} onChange={amountChangeHandler}/>
             </div>
             <div>
                 <label>Date</label>
-                <input type='date' onChange={dateChangeHandler}/>
+                <input type='date' value={enteredDate} onChange={dateChangeHandler}/>
             </div>
             <div>
                 <button type='submit'>Add</button>
