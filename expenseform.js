@@ -13,8 +13,17 @@ const ExpenseForm=()=>{
     const dateChangeHandler = (event) => {
       setEnteredDate(event.target.value);
     };
+    const submitChangeHandler=(event)=>{
+        event.preventDefault();
+        const exp={
+        ExpenseTitle:enteredExpenseTitle,
+        ExpenseAmount:enteredExpenseAmount,
+        Date:new Date(enteredDate)
+    }
+    console.log(exp);
+    }
     return (
-        <form>
+        <form onSubmit={submitChangeHandler}>
             <div>
                 <lable>ExpenseTitle</lable>
                 <input type='text' onChange={titleChangeHandler}/>
